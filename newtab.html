@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .generated-content {
+        width: 80%;
+        height: 80%;
+        margin: 10px auto;
+        padding: 10px;
+        border: 1px solid #ccc;
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="generated-content">
+      <p id="generatedContent"></p>
+    </div>
+  </body>
+  <script>
+    const generatedContent = document.getElementById('generatedContent');
+    chrome.storage.local.get(['resumeText', 'jobDescription', 'generatedCoverLetter'], function(result) {
+        if (result.generatedCoverLetter) {
+            generatedContent.innerHTML = result.generatedCoverLetter;
+        } else {
+            generatedContent.innerHTML = result.resumeText;
+        }
+    });
