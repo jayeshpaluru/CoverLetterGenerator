@@ -2,7 +2,7 @@
 
 ## What is it?
 
-### This is a website that aims to help making cover letters easier. This will help streamline the job application process, and make the process of making cover letters for a job posting significantly easier by tailoring a cover letter with a specific resume and cover letter.
+### This is a website that aims to help making cover letters easier. This will help streamline the job application process, and make the process of making cover letters for a job posting significantly easier by tailoring a cover letter with an inputted resume and cover letter.
 
 ## What was it built with?
 
