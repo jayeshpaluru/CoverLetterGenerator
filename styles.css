@@ -1,0 +1,13 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .bg-gradient-to-b {
+    background: linear-gradient(to bottom, #2E3192, #1BFFFF);
+  }
+  #generatedCoverLetter {
+    max-height: 60vh; /* set a maximum height */
+    overflow-y: auto; /* add scrollbars when content overflows */
+  }
+  
