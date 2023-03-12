@@ -1,32 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cover Letter Generator</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="styles.css">
   </head>
-  <body class="bg-gradient-to-b from-blue-200 to-purple-200 h-screen flex items-center justify-center">
-    <div class="container mx-auto">
-      <h1 class="text-3xl font-bold mb-4">Cover Letter Generator</h1>
-      <form id="cover-letter-form">
-        <div class="mb-4">
-          <label class="block font-bold mb-2" for="resume-input">Enter your resume:</label>
-          <textarea class="block w-full border border-gray-300 p-2" id="resumeText" name="resumeText" rows="5" required></textarea>
+  <body>
+    <header class="bg-gradient-to-r from-blue-400 to-purple-400">
+      <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <h1 class="text-white text-3xl font-bold">Cover Letter Generator</h1>
+      </div>
+    </header>
+    <main class="py-6">
+      <div class="container mx-auto">
+        <form id="cover-letter-form" class="max-w-lg mx-auto">
+          <div class="mb-4">
+            <label class="block font-bold mb-2" for="resume-input">Enter your resume:</label>
+            <textarea class="block w-full border border-gray-300 p-2 rounded-md" id="resumeText" name="resumeText" rows="5" required></textarea>
+          </div>
+          <div class="mb-4">
+            <label class="block font-bold mb-2" for="job-description-input">Enter job description:</label>
+            <textarea class="block w-full border border-gray-300 p-2 rounded-md" id="jobDescription" name="jobDescription" rows="5" required></textarea>
+          </div>
+          <div class="mb-4">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md" type="button" id="submit">Generate Cover Letter</button>
+          </div>
+        </form>
+        <div id="generatedCoverLetter" class="bg-white p-6 rounded-md shadow-md">
+          <p class="text-gray-600">Generated cover letter will appear here.</p>
         </div>
-        <div class="mb-4">
-          <label class="block font-bold mb-2" for="job-description-input">Enter job description:</label>
-          <textarea class="block w-full border border-gray-300 p-2" id="jobDescription" name="jobDescription" rows="5" required></textarea>
-        </div>
-        <div class="mb-4">
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="button" id="submit">Generate Cover Letter</button>
-        </div>
-      </form>
-      <div id="generatedCoverLetter">
-        <p>Generated cover letter will appear here.</p>
-      </div>      
-    </div>
-    <script src="index.js"></script>
+      </div>
+    </main>
+    <script src="index.js"></script>  
   </body>
 </html>
